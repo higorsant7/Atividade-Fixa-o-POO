@@ -1,0 +1,21 @@
+public class Veterinario
+{
+    private string especialidade;
+
+    public string Especialidade
+    {
+        get { return especialidade; }
+        set
+        {
+            if (value != "Felinos" && value != "Caninos")
+                throw new ArgumentException("Especialidade deve ser 'Felinos' ou 'Caninos'.");
+            especialidade = value;
+        }
+    }
+
+    public void Examinar(Animal animal)
+    {
+        Console.WriteLine($"Veterinário está examinando {animal.Nome}.");
+        animal.EmitirSom();
+    }
+}
