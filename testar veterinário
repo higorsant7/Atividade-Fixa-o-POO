@@ -1,0 +1,2 @@
+Veterinario veterinario = new Veterinario() { Especialidade = "Caninos" };
+veterinario.Examinar(cachorro);
