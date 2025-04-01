@@ -1,0 +1,27 @@
+using System;
+
+public abstract class Animal
+{
+    public string Nome { get; set; }
+    
+    private int idade;
+    public int Idade
+    {
+        get { return idade; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Idade não pode ser negativa.");
+            idade = value;
+        }
+    }
+
+    // Método abstrato
+    public abstract void EmitirSom();
+
+    // Método virtual
+    public virtual void Apresentar()
+    {
+        Console.WriteLine($"Nome: {Nome}, Idade: {Idade} anos");
+    }
+}
