@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+public class Zoo
+{
+    public List<Animal> Animais { get; set; }
+
+    public Zoo()
+    {
+        Animais = new List<Animal>();
+    }
+
+    public void AdicionarAnimal(Animal animal)
+    {
+        Animais.Add(animal);
+        Console.WriteLine($"{animal.Nome} foi adicionado ao zoológico.");
+    }
+
+    public void MostrarAnimais()
+    {
+        Console.WriteLine("Animais no Zoológico:");
+        foreach (var animal in Animais)
+        {
+            animal.Apresentar();
+        }
+    }
+}
