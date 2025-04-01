@@ -16,10 +16,8 @@ public abstract class Animal
         }
     }
 
-    // Método abstrato
     public abstract void EmitirSom();
 
-    // Método virtual
     public virtual void Apresentar()
     {
         Console.WriteLine($"Nome: {Nome}, Idade: {Idade} anos");
