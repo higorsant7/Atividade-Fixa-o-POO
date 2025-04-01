@@ -1,0 +1,28 @@
+public class Cachorro : Animal
+{
+    public override void EmitirSom()
+    {
+        Console.WriteLine("Au Au!");
+    }
+}
+
+public class Gato : Animal
+{
+    public override void EmitirSom()
+    {
+        Console.WriteLine("Miau!");
+    }
+}
+
+public class Passaro : Animal
+{
+    public override void EmitirSom()
+    {
+        Console.WriteLine("Piu Piu!");
+    }
+
+    public void Voar()
+    {
+        Console.WriteLine($"{Nome} está voando!");
+    }
+}
