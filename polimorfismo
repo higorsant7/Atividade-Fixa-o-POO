@@ -5,15 +5,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Criar instâncias de animais
         Animal cachorro = new Cachorro() { Nome = "Rex", Idade = 5 };
         Animal gato = new Gato() { Nome = "Felix", Idade = 3 };
         Animal passaro = new Passaro() { Nome = "Piupiu", Idade = 2 };
 
-        // Lista de animais
         List<Animal> animais = new List<Animal>() { cachorro, gato, passaro };
 
-        // Polimorfismo: Chamar EmitirSom() de cada animal
         foreach (var animal in animais)
         {
             animal.EmitirSom();
